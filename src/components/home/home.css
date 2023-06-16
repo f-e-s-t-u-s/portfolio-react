@@ -169,29 +169,42 @@ input {
 .about-me-main {
   height: 100vh;
   width: 100vw;
-  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .my-image {
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 30%;
-  height: 75%;
+  /* height: 75%; */
+}
+.my-image img{
+  width: 100%;
+  border-radius: 10px;
 }
 .about-text {
-  background-color: blue;
+  background-color: #808080;
+  border-radius: 10px;
   width: 50%;
-  height: 75%;
+  /* height: 75%; */
   padding: 10px;
   margin-left: 10px;
 }
 .about-text p {
-  height: 100%;
+  color: white;
+  /* height: 100%; */
+}
+.about-text h1,
+.about-text small{
+  color:  white;
 }
 .two-text {
+  
+  /* height: 80%; */
+  /* background-color: pink; */
+}
+.two-text p{
   height: 80%;
-  background-color: pink;
 }
 
 /* Services Three */
@@ -372,6 +385,21 @@ margin-top: 80px;
 .hello-wave img{
   width: 25px;
   
+}
+
+
+/* Footer */
+
+.footer{
+  height: 10vh;
+    background-color: rgba(0, 0, 0, 0.894);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    position: absolute;
 }
 
 

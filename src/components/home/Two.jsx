@@ -1,15 +1,18 @@
 import React from "react";
 import "./home.css";
+import me from "../../images/me.jpg"
 
 function About() {
   return (
     <div className="about-me-main">
-      <div className="my-image"></div>
+      <div className="my-image">
+        <img src={me} alt="" />
+      </div>
       <div className="about-text">
         <h1>About Me</h1>
         <small>Full-Stack Web Developer || CyberSecurity Specialist</small>
         <div className="two-text">
-        {/* <p>
+        <p>
           I am a skilled web developer and cybersecurity analyst. With a strong
           passion for creating secure and user-friendly online experiences, I
           excel in developing seamless and scalable web solutions tailored to
@@ -34,7 +37,7 @@ function About() {
           assets. I am dedicated to delivering exceptional results and staying
           abreast of the latest industry advancements. Let's work together to
           create secure and outstanding web experiences
-        </p> */}
+        </p>
         </div>
       </div>
     </div>
