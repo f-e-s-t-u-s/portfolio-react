@@ -178,7 +178,7 @@ input {
   width: 30%;
   /* height: 75%; */
 }
-.my-image img{
+.my-image img {
   width: 100%;
   border-radius: 10px;
 }
@@ -195,21 +195,20 @@ input {
   /* height: 100%; */
 }
 .about-text h1,
-.about-text small{
-  color:  white;
+.about-text small {
+  color: white;
 }
 .two-text {
-  
   /* height: 80%; */
   /* background-color: pink; */
 }
-.two-text p{
+.two-text p {
   height: 80%;
 }
 
 /* Services Three */
 
-.three-main{
+.three-main {
   height: 100vh;
   width: 100%;
   background-color: yellow;
@@ -217,19 +216,18 @@ input {
   gap: 1em;
 }
 .services-text {
- 
   width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-margin-top: 80px;
+  margin-top: 80px;
   padding: 10px;
 }
 
 .services-text-main {
   margin-left: 30px;
 }
-.services-text-main h1{
+.services-text-main h1 {
   font-size: 65px;
 }
 
@@ -249,13 +247,12 @@ margin-top: 80px;
   flex-direction: column;
   /* justify-content: center; */
 }
-.service-links-content{
+.service-links-content {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
-
 }
-.service-links-content img{
+.service-links-content img {
   width: 30px;
   margin-left: auto;
   margin-right: 40px;
@@ -264,59 +261,97 @@ margin-top: 80px;
   padding: 7px;
   cursor: pointer;
   /* float: right; */
-
 }
-
 
 /* Component four */
 
-.four-projects{
+.four-projects {
   height: 100vh;
   width: 100%;
   background-color: white;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
 }
-.project-card-container{
- position: relative;
- height: 100%;
- width: 100%;
- background-color: green;
- 
-
-}
-.project-card{
-  width: 300px;
-  height: 200px;
-  background-color: red;
-  position: absolute;
-  left: calc(100px * var(--index));
-  top: calc(100px * var(--index));
-
-  color: #000;
-  padding: 10px;
-  margin: 10px; 
+.project-one,
+.project-two,
+.project-three {
+  width: 30%;
+  height: 90%;
+  /* display: flex; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: purple;
+  border-radius: 10px;
+  padding: 5px;
 }
 
+.project-card {
+  width: 90%;
+  height: 250px;
+  background-color: pink;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+.project-card img {
+  margin-top: 20px;
+  width: 200px;
+  height: 50%;
+  border-radius: 7px;
+}
+.project-card button {
+  width: 90px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: hsla(240, 86%, 61%, 0.922);
+}
+.project-img {
+  width: 30px;
+  /* margin-left: auto; */
+  float: right;
+  margin-right: 40px;
+  background-color: hsla(240, 86%, 61%, 0.922);
+  border-radius: 50%;
+  padding: 7px;
+  cursor: pointer;
+}
+.project-details {
+  display: flex;
+  align-items: center;
 
-
-
-
+  /* gap: 2em; */
+}
+.project-three button {
+  width: 90px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: hsla(240, 86%, 61%, 0.922);
+  margin-top: 20px;
+  margin-left: 60px;
+}
 
 /* Component Five */
 
-.contact-main{
+.contact-main {
   height: 100vh;
   width: 100%;
   background-color: yellow;
   display: flex;
 
- 
   /* gap: 1em; */
 }
 
 .contact-left,
-.contact-right{
+.contact-right {
   margin-left: 30px;
   width: 45%;
   display: flex;
@@ -326,27 +361,30 @@ margin-top: 80px;
   /* align-items: center; */
 }
 
-.mail-img{
+.mail-img {
   width: 40px;
   display: flex;
-
+  cursor: pointer;
   gap: 2em;
   margin-bottom: 25px;
- 
+
   /* justify-content: space-between; */
 }
+.mail-img a{
+  text-decoration: none;
+  color: black;
+}
 
-.mail-img img{
+.mail-img img {
   width: 100%;
   /* display: flex; */
 }
 
-.contact-left h1{
+.contact-left h1 {
   font-size: 60px;
 }
 
-
-.square{
+.square {
   border: 2px solid black;
   border-radius: 50%;
   padding: 7px;
@@ -360,49 +398,42 @@ margin-top: 80px;
   align-items: center;
   justify-content: center;
 }
-#redirect{
+#redirect {
   background-color: blue;
   border-radius: 50%;
   width: 60px;
- /* margin-top: 80px; */
+  /* margin-top: 80px; */
 }
 
-.hello-wave{
+.hello-wave {
   /* background-color: green; */
   /* position: absolute; */
   display: flex;
- width: 60%;
- justify-content: center;
- gap: 1em;
+  width: 60%;
+  justify-content: center;
+  gap: 1em;
   /* position:relative;
   flex-direction: column; */
 }
-.hello-wave h2
-{
-
-
+.hello-wave h2 {
 }
-.hello-wave img{
+.hello-wave img {
   width: 25px;
-  
 }
-
 
 /* Footer */
 
-.footer{
+.footer {
   height: 10vh;
-    background-color: rgba(0, 0, 0, 0.894);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 100%;
-    position: absolute;
+  background-color: rgba(0, 0, 0, 0.894);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  position: absolute;
 }
-
-
 
 @media (max-width: 300px) {
   .about-me-main {
