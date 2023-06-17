@@ -14,13 +14,13 @@ function Contact() {
         <div className="mail-img">
           <img src={mail} alt="" />
           
-          <p name= "email">festusgitahik@gmail.com</p>
+          <a href="mailto:festusgitahik@gmail.com"><p name= "email">festusgitahik@gmail.com</p></a>
         </div>
 
         <hr style={{ border: "solid black 2px", width: "100%" }} />
         <div className="mail-img">
           <img src={phone} alt="" />
-          <p>+254790504636</p>
+          <a href="tel:+254790504636"><p>+254790504636</p></a>
          
       
         </div>
