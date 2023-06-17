@@ -58,11 +58,12 @@ function Spotlight() {
         <Nav></Nav>
         <div className="one-content">
           <div className="socials">
+
             <img id="line" src={line} alt="" />
-            <img src={twitter} alt="" />
-            <img src={linkedin} alt="" />
-            <img src={insta} alt="" />
-            <img src={github} alt="" />
+          <a href="https://twitter.com/f_e_s_t_u_s">  <img src={twitter} alt="" /></a>
+           <a href="https://linkedin.com/in/festus-gitahi-465033254/"> <img src={linkedin} alt="" /></a>
+           <a href="https://www.instagram.com/f.e.st.u.s/"> <img src={insta} alt="" /></a>
+            <a href="https://github.com/f-e-s-t-u-s/"><img src={github} alt="" /></a>
           </div>
           <div className="text">
             <h2>Hello There!</h2>
