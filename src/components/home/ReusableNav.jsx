@@ -6,12 +6,12 @@ import search from "../../images/search.png"
 function Nav(){
     return(
         <nav>
-           <div className="logo"> <img src={Logo}  /></div>
+           <div className="logo"> <a href="/"><img src={Logo}  /></a> </div>
            <div className="links">
             <h1>About</h1>
             <h1>Service</h1>
             <h1>Portfolio</h1>
-            <h1>Testimonial</h1>
+           <a href="blogs"> <h1>Blogs</h1></a>
            </div>
 
            <div className="search">
