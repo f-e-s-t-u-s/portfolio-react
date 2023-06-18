@@ -1,19 +1,50 @@
 import React from "react";
 import Navbar from "./NavReuse";
+import axios from 'axios'
+
 
 function Login() {
+
+
+const handleSubmit = async (e) =>{
+  const form = document.querySelector('form')
+
+  e.preventDefault();
+  const formdata = new FormData(form)
+
+  const userData = {
+    email: formdata.get("email"),
+    password: formdata.get("password")
+  }
+  // console.log(userData)
+
+  //ppost data
+  await axios.post("http://localhost:8000/api/login", userData).then((data)=>{
+    console.log(data.data)
+  }).catch((err)=>{
+    console.log(err);
+  })
+  
+}
+
+
+
+
+
+
+
   return (
     <div className="login-main">
       <div className="login-image">
         <Navbar></Navbar>
 
         <div className="login-form">
-            <form action="">
+            <form action="" onSubmit={handleSubmit} >
           <div className="form-center">
             
               <h1>Sign In</h1>
               <input class="login-input" type="text" placeholder="Email Address" name="email" />
-              <input type="text" placeholder="Password" className="login-input" />
+              <input type="password" name="password" placeholder="Password" className="login-input" />
               <button>Continue</button>
 
               <small>Or</small>
