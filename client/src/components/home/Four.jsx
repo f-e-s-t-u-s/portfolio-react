@@ -57,7 +57,7 @@ function Projects() {
         <img src={netflix} alt="" />
             <button>View Project</button>
         </div>
-        <button > View all my projects</button>
+        <button id="allprojects" > View all my projects</button>
       </div>
     </div>
   );
