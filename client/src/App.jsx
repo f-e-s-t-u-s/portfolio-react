@@ -4,6 +4,7 @@ import Home from './components/home/Home';
 import Blogs from './components/home/blogsComponents/Blogs';
 import Login from './components/home/blogsComponents/Login';
 import Create from './components/home/blogsComponents/Create';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

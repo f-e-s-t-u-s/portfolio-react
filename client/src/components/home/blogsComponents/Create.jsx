@@ -1,35 +1,34 @@
 import React, { useState } from "react";
 import Navbar from "./NavReuse";
 import axios from "axios";
+import {toast,ToastContainer} from 'react-toastify'
 
 function Create() {
+  const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [checkpassword, setCheckPassword] = useState()
+  const [checkpassword, setCheckPassword] = useState();
   const [checkemail, setCheckemail] = useState();
+
+  const handleFocus = () => {
+    setShow(true);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if(name == "email"){
-        //check email validity
-        setEmail(value);
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+    if (name === "email") {
+      //check email validity
+      setEmail(value);
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
         ? setCheckemail(false)
         : setCheckemail(true);
-    }
-    else if(name === "password"){
-        setPassword(value);
-        !/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/i.test(value)
+    } else if (name === "password") {
+      setPassword(value);
+      !/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/i.test(value)
         ? setCheckPassword(false)
-        :setCheckPassword(true);
+        : setCheckPassword(true);
     }
-    
-    
-    
-   
-
-     
   };
 
   console.log(checkemail);
@@ -49,69 +48,114 @@ function Create() {
       username: username,
     };
 
-    if (email !== "" && checkemail === true && password !== "" && checkpassword === true ) {
+    if (
+      email !== "" &&
+      checkemail === true &&
+      password !== "" &&
+      checkpassword === true
+    ) {
       console.log(email);
       await axios
         .post("http://localhost:8000/api/create", values)
         .then((data) => {
           console.log(data.data);
+          if (data.data.error) {
+            toast.error(data.data.error)
+          }
 
           if (data.data.status === 200 && data.data.logged === true) {
-            const redirect = () => (window.location.href = "/login");
+            const redirect = () => (window.location.href = "/blogs/login");
+            redirect();
           }
           if (data.data.error && data.data.logged === false) {
-            const redirect = () => (window.location.href = `/create`);
+            const redirect = () => (window.location.href = "/blogs/create");
+            redirect();
+            toast.error(data.data.error)
           }
         })
         .catch((err) => {
           console.log(err);
+          toast.error('faile to add user')
+
         });
     }
   };
 
   return (
     <div className="create-main">
+        <ToastContainer
+position="top-center"
+autoClose={1000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+
+
+theme="light"
+/>
+{/* Same as */}
+<ToastContainer />
       <div className="login-image">
         <Navbar></Navbar>
 
         <div className="login-form">
           <form action="" onSubmit={handleSubmit}>
-            <div className="form-center">
-              <h1>Create Account</h1>
-              <input
-                className="login-input"
-                type="text"
-                placeholder="username"
-                name="username"
-                
-              />
-              <input
-                class="login-input"
-                type="text"
-                placeholder="Email Address"
-                name="email"
-                onChange={handleChange}
-                value={email}
-              />
-              <input
-                type="text"
-                placeholder="Password"
-                className="login-input"
-                name="password"
-                onChange={handleChange}
-                value={password}
-              />
-              <button type="submit">Continue</button>
+            <div
+              className={`form-center-main ${
+                checkemail === true ? "green" : ""
+              } ${checkemail === false && "red"}  ${
+                checkpassword === true ? "green" : ""
+              }  ${checkpassword === false ? "red" : ""} `}
+            >
+              <div className="form-center">
+                <h1>Create Account</h1>
+                <input
+                  className="login-input-username"
+                  type="text"
+                  placeholder="username"
+                  name="username"
+                />
+                <input
+                  class="login-input"
+                  type="text"
+                  placeholder="Email Address"
+                  name="email"
+                  onFocus={handleFocus}
+                  onChange={handleChange}
+                  value={email}
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="login-input"
+                  name="password"
+                  onFocus={handleFocus}
+                  onChange={handleChange}
+                  value={password}
+                />
 
-              <small>Or</small>
+              <div className="requirements">
+                <ul>
+                    <li>Password must contain Minimum eight characters</li>
+                    <li>At least one uppercase letter</li>
+                    <li>one lowercase letter</li>
+                    <li>one number and one special character</li>
+                </ul>
+              </div>
 
-              <button>Continue with google</button>
-              <button>Continue with Apple</button>
+                <button type="submit">Continue</button>
 
-              <a href="/blogs/login">
-                {" "}
-                <p>Already Have an account? Login</p>{" "}
-              </a>
+                <small>Or</small>
+
+                <button>Continue with google</button>
+                <button>Continue with Apple</button>
+
+                <a href="/blogs/login">
+                  {" "}
+                  <p>Already Have an account? Login</p>{" "}
+                </a>
+              </div>
             </div>
           </form>
         </div>
