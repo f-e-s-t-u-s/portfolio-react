@@ -198,10 +198,7 @@ input {
 .about-text small {
   color: white;
 }
-.two-text {
-  /* height: 80%; */
-  /* background-color: pink; */
-}
+
 .two-text p {
   height: 80%;
 }
@@ -410,8 +407,7 @@ input {
   /* position:relative;
   flex-direction: column; */
 }
-.hello-wave h2 {
-}
+
 .hello-wave img {
   width: 25px;
 }
@@ -437,43 +433,39 @@ input {
   }
   .hello-wave h2 {
     margin-top: 30px;
-    
   }
   #redirect {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .mail-img a{
+  .mail-img a {
     margin-right: 15px;
+  }
 
-  }
-  .four{
-   /* height: 120vh; */
-  }
-  .four-projects{
-    gap: .5em;
+  .four-projects {
+    gap: 0.5em;
     display: flex;
     flex-direction: column;
   }
-  .project-one{
-    height:33%;
+  .project-one {
+    height: 33%;
     width: 100%;
   }
   .project-two,
-  .project-three{
-    height:30%;
+  .project-three {
+    height: 30%;
     width: 100%;
   }
   .project-one hr,
   .project-two hr,
-  .project-three hr{
-display: none;
+  .project-three hr {
+    display: none;
   }
-  .project-details h1{
+  .project-details h1 {
     font-size: 16px;
     margin-bottom: 0px;
   }
-  .project-card{
+  .project-card {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -482,83 +474,78 @@ display: none;
     margin-top: 20px;
     position: relative;
   }
-  .project-card img{
+  .project-card img {
     margin-top: 0px;
     width: 80%;
     height: 110px;
     /* height: 250px;
     width: 150px; */
   }
-  
-  .project-img{
+
+  .project-img {
     position: absolute;
     margin-top: 15px;
     right: 0;
   }
-  .project-card button{
+  .project-card button {
     margin-top: 15px;
     margin-bottom: 10px;
   }
-  #allprojects{
+  #allprojects {
     margin-top: 40px;
     bottom: 0;
-  
   }
-  .three{
+  .three {
     height: 120vh;
   }
-  .three-main{
+  .three-main {
     display: flex;
     height: 100%;
     flex-direction: column;
   }
   .services-text,
-  .services-links{
+  .services-links {
     display: flex;
-    margin-top:  0px;
+    margin-top: 0px;
     flex-direction: column;
 
     width: 100%;
   }
-  .services-text-main h1{
+  .services-text-main h1 {
     font-size: 25px;
   }
-  .services-img{
+  .services-img {
     display: none;
   }
-  .morestuff{
+  .morestuff {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .morestuff img{
+  .morestuff img {
     width: 40px;
     margin-top: 20px;
   }
-  .two{
+  .two {
     height: 150vh;
     width: 100%;
   }
-  .about-me-main{
+  .about-me-main {
     height: 150vh;
     display: flex;
     width: 100%;
     flex-direction: column;
   }
   .my-image,
-  .about-text{
+  .about-text {
     width: 100%;
   }
-  .my-image img{
+  .my-image img {
     width: 100%;
   }
-  .search{
+  .search {
     display: none;
   }
-
-
-
-
 }
 
 /* Footer */
@@ -574,8 +561,6 @@ display: none;
   width: 100%;
   position: absolute;
 }
-
-
 
 /* Login Nav */
 #login-nav {
@@ -622,7 +607,7 @@ display: none;
 .form-center {
   /* width: 350px; */
   display: flex;
-   flex-direction: column;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   height: 580px;
@@ -699,36 +684,30 @@ display: none;
   color: yellow;
 }
 
-
-@media (max-width:310px) {
-  .form-center{
+@media (max-width: 310px) {
+  .form-center {
     height: 100%;
   }
-  nav img{
-   
+  nav img {
     width: 80%;
   }
-  
 }
 
-@media (max-width:500px) {
- 
-  .form-center{
+@media (max-width: 500px) {
+  .form-center {
     display: flex;
-    align-items: center; 
+    align-items: center;
     /* background-color: red; */
   }
-  .form-center a{
+  .form-center a {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
   }
-
 }
-@media (min-width:501px) and (max-width:1492px) {
-  .form-center{
+@media (min-width: 501px) and (max-width: 1492px) {
+  .form-center {
     width: 350px;
   }
 }
-
