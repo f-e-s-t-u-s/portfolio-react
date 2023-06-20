@@ -620,11 +620,12 @@ display: none;
 }
 
 .form-center {
-  width: 350px;
+  /* width: 350px; */
   display: flex;
-  flex-direction: column;
+   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  height: 550px;
+  height: 580px;
   background-color: grey;
   margin-top: 50px;
   border-radius: 10px;
@@ -697,3 +698,37 @@ display: none;
   font-size: 12px;
   color: yellow;
 }
+
+
+@media (max-width:310px) {
+  .form-center{
+    height: 100%;
+  }
+  nav img{
+   
+    width: 80%;
+  }
+  
+}
+
+@media (max-width:500px) {
+ 
+  .form-center{
+    display: flex;
+    align-items: center; 
+    /* background-color: red; */
+  }
+  .form-center a{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+}
+@media (min-width:501px) and (max-width:1492px) {
+  .form-center{
+    width: 350px;
+  }
+}
+
