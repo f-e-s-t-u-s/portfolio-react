@@ -1,15 +1,17 @@
 import React from "react";
 import Author from "./ReusableAuthor";
 import cover from "../../../images/picoctf-logo.jpg"
+import calendar from "../../../images/calendar.png"
+import views from "../../../images/views.png"
 
 function Blogcard() {
   return (
     <div className="blogcard">
       <div className="card-top">
-        
         <img id="cover" src={cover} alt="" />
-        <Author></Author>
-
+        <div className="author-overlay">
+          <Author />
+        </div>
       </div>
 
       <div className="card-bottom">
@@ -22,8 +24,8 @@ function Blogcard() {
         </p>
         <hr />
       <div className="others-card-bottom">
-      <h3>date</h3>
-      <h3>views</h3>
+      <h3> <img src={calendar} alt="" />  date</h3>
+      <h3> <img src={views} alt="" /> views</h3>
       </div>
       <button>Read More</button>
       </div>
