@@ -7,6 +7,7 @@ import Search from "./Reusablesearch";
 
 import Blogcard from "./ReusableblogCard";
 import Author from "./ReusableAuthor";
+import Footer from "./ReusableFooter";
 
 function Blogs() {
   return (
@@ -27,7 +28,7 @@ function Blogs() {
       </div>
       <Search></Search>
       <div className="scroll-content">
-       <Author></Author>
+        <Author></Author>
         <h2>Example heading for blogs</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, nisi?
@@ -35,10 +36,14 @@ function Blogs() {
           cum minima nobis ut illo nam, eius vel alias! Sapiente!
         </p>
       </div>
-    <div className="blogs">
-    <Blogcard></Blogcard>
-    </div>
-      
+      <div className="blogs">
+        <Blogcard></Blogcard>
+      </div>
+
+<div className="footer-blogs">
+  <Footer></Footer>
+</div>
+
     </div>
   );
 }
