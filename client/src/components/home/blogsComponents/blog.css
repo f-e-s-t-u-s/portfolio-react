@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main-blog{
+    height: 100vh;
+    background-color: black;
+}
+.welcome{
+    background-color: white;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+}
+.welcome-text{
+    margin-left: 20px;
+    background-color: red;
+    /* padding: 5px; */
+    display: flex;
+    width: 55%;
+    height: 100%;
+    margin-bottom: 10px;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+.welcome-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-right: 20px;
+}
+.welcome-links img{
+    width: 30px;
+
+}
+.search-div{
+    height: 10vh;
+    width: 100vw;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.search-div img{
+    width: 20px;
+    margin-left: 10px;
+}
+.search-content{
+    /* width: 50vw; */
+    width: 60%;
+    display: flex;
+    gap: 1em;
+    margin-left: 15px;
+    overflow-x: scroll;
+    
+}
+.search-content::-webkit-scrollbar{
+    display: none;
+}
+.scroll-content{
+    height: 40vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.scroll-content p{
+    margin-left: 10px;
+}
+.author{
+    width: 120px;
+    background-color: blue;
+    border-radius: 30%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    bottom: 0;
+    /* position: absolute; */
+    /* float: right; */
+
+   
+}
+.author img{
+    width: 40px;
+    border-radius: 40%;
+    
+}
+
+.blogs{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+.blogcard{
+
+    width: 100%;
+    padding: 5px;
+    background-color: azure;
+    height: 380px;
+}
+.card-top{
+    background-color: brown;
+    height: 55%;
+    width: 100%;
+    position: relative;
+}
+#cover{
+width: 100%;
+height: 100%;
+}
+.card-bottom{
+    background-color: green;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.card-bottom h2{
+    font-size: 20px;
+    color: white;
+}
+.card-bottom p{
+    font-size: 15px;
+    color: wheat;
+}
+.card-bottom button{
+    padding: 8px 10px;
+   width:80%;
+   margin-top: 10px;
+   border-radius: 10px;
+}
+.others-card-bottom{
+    width: 100%;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+@media (max-width:500px) {
+    .welcome-text{
+        width: 100%;
+        margin-right: 20px;
+        padding: 3px;
+    }
+    .welcome-text h1{
+        font-size: 23px;
+
+    }
+    .welcome-text p{
+        font-size: 12px;
+    }
+    .welcome-links{
+        display: none;
+    }
+    .search-div{
+        display: grid;
+        place-items: center;
+    }
+    .search-content{
+        width: 80%;
+    }
+}
+
+@media (min-width:501px) and (max-width:900px) {
+    .welcome-text{
+        width: 100%;
+        margin-right: 20px;
+        padding: 3px;
+    }
+    .welcome-text h1{
+        font-size: 30px;
+
+    }
+    .welcome-text p{
+        font-size: 15px;
+    }
+    .welcome-links{
+        display: none;
+    }
+}

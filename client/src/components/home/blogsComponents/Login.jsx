@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "./NavReuse";
 import axios from "axios";
+import {toast,ToastContainer} from 'react-toastify'
+
 
 function Login() {
-  const [errormessage, setErrormessage] = useState("");
+  // const [errormessage, setErrormessage] = useState("");
 
   const handleSubmit = async (e) => {
     const form = document.querySelector("form");
@@ -22,6 +24,9 @@ function Login() {
       .post("http://localhost:8000/api/login", userData)
       .then((data) => {
         console.log(data.data);
+        // if(data.data.error){
+        //   toast.error(data.data.error)
+        // }
 
         if (data.data.status === 200 && data.data.logged === true) {
           const redirect = () => (window.location.href = "/blogs/");
@@ -30,7 +35,8 @@ function Login() {
         if (data.data.error && data.data.logged === false) {
           const errorMessage = data.data.error;
           console.log(errorMessage);
-          setErrormessage(errorMessage);
+          toast.error(data.data.error)
+          // setErrormessage(errorMessage);
           // const redirect = () => (window.location.href = "/blogs/login");
           // redirect();
         }
@@ -42,15 +48,26 @@ function Login() {
 
   return (
     <div className="login-main">
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
       <div className="login-image">
         <Navbar></Navbar>
 
         <div className="login-form">
           <form action="" onSubmit={handleSubmit}>
             <div className="form-center">
-              <div className="errorMessage">
+              {/* <div className="errorMessage">
                 {errormessage && <p> {errormessage} </p>}
-              </div>
+              </div> */}
 
               <h1>Sign In</h1>
               <input

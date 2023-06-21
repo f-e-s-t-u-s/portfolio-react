@@ -684,20 +684,31 @@ input {
   color: yellow;
 }
 
-@media (max-width: 310px) {
+/* @media (max-width: 310px) {
   .form-center {
     height: 100%;
   }
   nav img {
     width: 80%;
   }
-}
+  
+} */
 
-@media (max-width: 500px) {
+/* @media (min-width:311px) and (max-width:499px) {
+  .form-center{
+    padding: 15px;
+
+    
+
+  }
+} */
+
+
+/* @media (max-width: 500px) {
   .form-center {
     display: flex;
     align-items: center;
-    /* background-color: red; */
+   
   }
   .form-center a {
     text-align: center;
@@ -705,9 +716,9 @@ input {
     flex-wrap: wrap;
     padding: 5px;
   }
-}
-@media (min-width: 501px) and (max-width: 1492px) {
+} */
+/* @media (max-width: 1492px) {
   .form-center {
     width: 350px;
   }
-}
+} */
