@@ -186,6 +186,96 @@
   width: 20px;
 }
 
+.footer-blogs{
+  height: 35vh;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+  position: relative;
+}
+.subscribe-blogs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px;
+  /* background-color: red; */
+  text-align: center;
+  /* margin-bottom: 10px; */
+
+}
+.subscribe-text{
+  color: white;
+}
+.email-footer{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  margin-top: 10px;
+  gap: 1em;
+  width: 100%;
+}
+.email-footer input{
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.email-footer button{
+  width: 40%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 5px;
+  background-color: #007bff;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.bottom-blogs{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+ color: white;
+  bottom: 0;
+  padding: 8px;
+  
+}
+.footer-links{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-top: 10px 10px;
+  padding: 5px;
+}
+.logo-footer{
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  /* align-items: center; */
+  justify-content: center;
+  
+}
+.logo-footer img{
+  width: 120px;
+  margin-bottom: 10px;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 300px) {
   .blogcard {
     height: 430px;
@@ -196,18 +286,14 @@
     width: 80%;
     height: 430px;
   }
+  
 }
 /* @media (min-width:621px) and (max-width:00px) {
     .blogcard{
         width: 70%;
     }
 } */
-@media (min-width: 622px) and (max-width: 2000px) {
-  .blogcard {
-    width: 300px;
-    height: 450px;
-  }
-}
+
 
 @media (max-width: 500px) {
   .welcome-text {
@@ -233,6 +319,88 @@
   }
 }
 
+
+@media (min-width: 622px) and (max-width: 831px) {
+  .blogcard {
+    width: 300px;
+    height: 450px;
+  }
+  .footer-blogs{
+    height: 22vh;
+  }
+  .email-footer{
+    flex-direction: row;
+    gap: .3em;
+   
+      width: 400px;
+    
+  }
+  .email-footer input{
+    width: 200px;
+  }
+  .subscribe-blogs{
+    /* display: block; */
+    flex-direction: row;
+  }
+  .subscribe-text{
+    text-align: left;
+    font-size: 13px;
+  }
+  .bottom-blogs{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2em;
+  }
+
+
+
+}
+
+@media (min-width:832px) and (max-width: 2000px) {
+  .blogcard {
+    width: 301px;
+    height: 451px;
+  }
+  .footer-blogs{
+    height: 20vh;
+    display: block;
+    align-items: left;
+  }
+  .email-footer{
+    flex-direction: row;
+    gap: 1em;
+    
+  }
+  .email-footer input{
+    width: 200px;
+  }
+  .subscribe-blogs{
+    display: grid;
+    place-content: center;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+  }
+  .subscribe-text{
+    text-align: left;
+    font-size: 13px;
+  }
+  .bottom-blogs{
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    /* gap: 2em; */
+  }
+  .email-footer input{
+    width: 400px;
+  }
+  .email-footer button{
+    width: 150px;
+  }
+  
+}
+
 @media (min-width: 501px) and (max-width: 900px) {
   .welcome-text {
     width: 100%;
@@ -248,4 +416,5 @@
   .welcome-links {
     display: none;
   }
+  
 }
