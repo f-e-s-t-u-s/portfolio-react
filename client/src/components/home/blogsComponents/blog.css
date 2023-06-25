@@ -114,9 +114,11 @@
 }
 
 .blogs {
-  height: 100vh;
+  height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  /* gap: 2em; */
   /* background-color: red; */
 }
 .blogcard {
@@ -126,6 +128,7 @@
   border: none;
   /* background-color: azure; */
   height: 380px;
+  margin-bottom: 40px;
 }
 .card-top {
   /* background-color: brown; */

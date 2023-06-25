@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../../../images/me.jpg"
+import me from "../../../images/boy.png"
 function Author() {
   return (
     <div className="author">

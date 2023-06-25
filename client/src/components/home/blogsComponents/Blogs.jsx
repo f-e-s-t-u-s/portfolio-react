@@ -38,6 +38,14 @@ function Blogs() {
       </div>
       <div className="blogs">
         <Blogcard></Blogcard>
+        <Blogcard></Blogcard>
+        <Blogcard></Blogcard>
+        <Blogcard></Blogcard>
+        <Blogcard></Blogcard>
+        <Blogcard></Blogcard><Blogcard></Blogcard>
+        <Blogcard></Blogcard>
+        <Blogcard></Blogcard>
+        <Blogcard></Blogcard>
       </div>
 
 <div className="footer-blogs">
