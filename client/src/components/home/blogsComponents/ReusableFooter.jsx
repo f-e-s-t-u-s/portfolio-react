@@ -61,7 +61,7 @@ function Footer() {
           const errorMessage = error.response.data.detail;
           toast.error(errorMessage); // Display error message using toast
         } else {
-          // Handle general error
+         
           toast.error('An error occurred.'); // Display a generic error message using toast
         }
       });
