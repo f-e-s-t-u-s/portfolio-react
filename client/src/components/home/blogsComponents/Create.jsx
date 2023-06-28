@@ -41,11 +41,16 @@ function Create() {
     const email = formdata.get("email");
     const password = formdata.get("password");
     const username = formdata.get("username");
+    const first_name = formdata.get("firstname")
+    const last_name = formdata.get("lastname")
+
 
     const values = {
       email: email,
       password: password,
       username: username,
+      first_name: first_name,
+      last_name: last_name,
     };
 
     if (
@@ -64,7 +69,7 @@ function Create() {
           }
 
           if (data.data.status === 200 && data.data.logged === true) {
-            const redirect = () => (window.location.href = "/blogs/login");
+            const redirect = () => (window.location.href = "/admin/login");
             redirect();
           }
           // if (data.data.error && data.data.logged === false) {
@@ -111,8 +116,21 @@ function Create() {
                 <input
                   className="login-input-username"
                   type="text"
+                  placeholder="First name"
+                  name="firstname"
+                />
+                 <input
+                  className="login-input-username"
+                  type="text"
+                  placeholder="Last name"
+                  name="lastname"
+                />
+                 <input
+                  className="login-input-username"
+                  type="text"
                   placeholder="username"
                   name="username"
+                  minLength={3}
                 />
                 <input
                   class="login-input"

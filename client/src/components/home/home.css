@@ -676,12 +676,16 @@ input {
 
 .requirements {
   /* background-color: red; */
-  width: 100%;
+  width: 80%;
+ 
   margin-bottom: 5px;
+  /* align-content: center; */
 }
 .requirements li {
   font-size: 12px;
+  
   color: yellow;
+ 
 }
 
 /* @media (max-width: 310px) {

@@ -1,32 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./admin.css";
 import Nav from "../../ReusableNav";
+import Search from "../Reusablesearch";
+import Add_post from "./Add_post";
+import AddCategory from "./AddCategory";
+
 function Posts() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [showCategoryPopup, setShowCategoryPopup] = useState("");
+  const openPopup = () => {
+    setShowPopup(true);
+    
+  };
+  const openCategoryPopup = () =>{
+    setShowCategoryPopup(true);
+  }
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+  const closeCategoryPopup = () =>{
+    setShowCategoryPopup(false);
+  }
   return (
     <div className="posts-main">
       <Nav></Nav>
       <div className="admin-child">
-        <div className="admin-all">
-          <p>All</p>
-          <p>Published</p>
-          <p>Drafts</p>
-        </div>
-        <div className="admin-search">
-          <input type="text" placeholder="search for a post" />
-          <button>Search</button>
-
-        </div>
+        <Search></Search>
       </div>
 
+      <div className="addnewblog">
+      <button onClick={openCategoryPopup}>Add new category</button>
+        <button onClick={openPopup}>Add new Blog</button>
+        
+      </div>
 
-        <div className="table">
-            <div className="title"></div>
-            <div className="author-name"></div>
-            <div className="categories"></div>
-            <div className="tags"></div>
-            <div className="date"></div>
-        </div>
+     
+      {showCategoryPopup && <AddCategory closePopup={closeCategoryPopup} />}
 
+      {showPopup && <Add_post closePopup={closePopup} />}
     </div>
   );
 }
