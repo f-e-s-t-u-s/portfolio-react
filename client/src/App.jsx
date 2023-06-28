@@ -6,6 +6,7 @@ import Login from './components/home/blogsComponents/Login';
 import Create from './components/home/blogsComponents/Create';
 import Posts from './components/home/blogsComponents/Admin/Posts';
 import 'react-toastify/dist/ReactToastify.css';
+import Add_post from './components/home/blogsComponents/Admin/Add_post';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/admin/login' element={<Login></Login>} ></Route>
         <Route path='/blogs/create' element={<Create></Create>} ></Route>
         <Route path='/admin/posts' element={<Posts></Posts>} ></Route>
+        <Route path='/admin/posts/add'  element={<Add_post></Add_post>} ></Route>
       </Routes>
     </div>
   );

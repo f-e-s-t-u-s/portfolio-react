@@ -29,7 +29,7 @@ function Login() {
         // }
 
         if (data.data.status === 200 && data.data.logged === true) {
-          const redirect = () => (window.location.href = "/blogs/");
+          const redirect = () => (window.location.href = "/admin/posts");
           redirect();
         }
         if (data.data.error && data.data.logged === false) {
