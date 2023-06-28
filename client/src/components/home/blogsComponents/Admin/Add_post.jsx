@@ -30,7 +30,7 @@ function Add_post({ closePopup }) {
           image: imageURL,
         };
 
-        // ! Upload image to server
+        // ! Upload image url to server
         axios
           .post("http://localhost:8000/api/add-post", data)
           .then((data) => {

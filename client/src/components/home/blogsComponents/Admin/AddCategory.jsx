@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 
-function AddCategory({closeCategoryPopup}) {
+function AddCategory({closePopup}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,7 +22,7 @@ function AddCategory({closeCategoryPopup}) {
         <form action="" onSubmit={handleSubmit} >
             <input name='category' type="text" placeholder='enter category' />
             <button type='submit'>Add</button>
-            <button onClick={closeCategoryPopup} >Close</button>
+            <button onClick={closePopup} >Close</button>
         </form>
     </div>
   )

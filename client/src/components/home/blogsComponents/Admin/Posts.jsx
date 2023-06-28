@@ -7,7 +7,7 @@ import AddCategory from "./AddCategory";
 
 function Posts() {
   const [showPopup, setShowPopup] = useState(false);
-  const [showCategoryPopup, setShowCategoryPopup] = useState("");
+  const [showCategoryPopup, setShowCategoryPopup] = useState(false);
   const openPopup = () => {
     setShowPopup(true);
     
